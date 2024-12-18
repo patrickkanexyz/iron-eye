@@ -1,0 +1,11 @@
+#!/usr/local/bin/bash
+
+# pass the key as command line arg for prototyping.
+# change this later
+API_KEY="${1}"
+
+URL="https://api.metalpriceapi.com/v1/latest?api_key="
+BASE="&base=USD"
+CURRENCIES="&currencies=EUR,XAU,XAG"
+
+curl "${URL}${API_KEY}${BASE}${CURRENCIES}"
