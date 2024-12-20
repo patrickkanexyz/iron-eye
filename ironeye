@@ -5,7 +5,7 @@
 API_KEY="${1}"
 
 URL="https://api.metalpriceapi.com/v1/latest?api_key="
-BASE="&base=USD"
-CURRENCIES="&currencies=EUR,XAU,XAG"
+BASE="USD"
+CURRENCIES="EUR,XAU,XAG"
 
-curl "${URL}${API_KEY}${BASE}${CURRENCIES}"
+curl "${URL}${API_KEY}&base=${BASE}&currencies=${CURRENCIES}"
